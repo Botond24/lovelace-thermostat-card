@@ -1,6 +1,6 @@
 import {cssData} from './styles.js';
 import ThermostatUI from './thermostat_card.lib.js';
-console.info("%c Thermostat Card \n%c  Version  1.3.1 ", "color: orange; font-weight: bold; background: black", "color: white; font-weight: bold; background: dimgray");
+console.info("%c Thermostat Card \n%c  Version  1.3.2 ", "color: orange; font-weight: bold; background: black", "color: white; font-weight: bold; background: dimgray");
 class ThermostatCard extends HTMLElement {
   constructor() {
     super();
