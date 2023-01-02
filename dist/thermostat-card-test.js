@@ -82,6 +82,13 @@ class ThermostatCard extends HTMLElement {
     }
   }
 
+  static getConfigElement() {
+    return document.createElement("content-card-editor");
+  }
+
+  static getStubConfig() {
+    return null
+  }
   setConfig(config) {
     // Check config
     if (!config.entity && config.entity.split(".")[0] === 'climate') {
@@ -140,7 +147,7 @@ class ThermostatCard extends HTMLElement {
     this._config = cardConfig;
   }
 }
-customElements.define('thermostat-card', ThermostatCard);
+customElements.define('thermostat-card-test', ThermostatCard);
 
 function deepClone(value) {
   if (!(!!value && typeof value == 'object')) {
