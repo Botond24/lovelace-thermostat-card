@@ -14,36 +14,47 @@
 A simple thermostat implemented in CSS and SVG based on <a href="https://codepen.io/dalhundal/pen/KpabZB/">Thermostat Control</a> by Dal Hundal
  (<a href="https://codepen.io/dalhundal">@dalhundal</a>) on <a href="https://codepen.io">CodePen</a>
 
-+  Supports [HACS](https://github.com/custom-components/hacs) installation
-+  Extra ambient temperature
-+  Allow changing of Opration mode
-+  Allow avoid the card background
++ Supports [HACS](https://github.com/custom-components/hacs) installation
++ Extra ambient temperature
++ Allow changing of Opration mode
++ Allow avoid the card background
 
 ## Preview
-![](https://bbs.hassbian.com/data/attachment/forum/202003/14/172544q3ajp7742cbo757h.gif)
+
+![Preview animation](https://bbs.hassbian.com/data/attachment/forum/202003/14/172544q3ajp7742cbo757h.gif)
 
 ## Update
+
 ### v1.3.0
+
 + fix icon
 + Fix the problem that the title blocks the arrow button [#16](https://github.com/fineemb/lovelace-thermostat-card/issues/16#issue-622934186)
 + Remove the small_i parameter and have done adaptive scaling
+
 ## HACS Installation
+
 Search for Thermostat Card
+
 ## Manual Installation
+
 1. Download `main.js` `thermostat_card.lib.js` `styles.js`
 1. Copy to `www\community\lovelace-thermostat-card`
 1. Add the following to your Lovelace resources
+
     ``` yaml
     resources:
       - url: /hacsfiles/lovelace-thermostat-card/main.js
         type: module
     ```
+
 1. Add the following to your Lovelace config `views.cards` key
+
     ```yaml
     - type: custom:thermostat-card
       entity: climate.gong_zuo_jian_kong_diao
       title: 工作间
     ```
+
     Replace `climate.gong_zuo_jian_kong_diao` with your climate's entity_id and `工作间` with any name you'd like to name your climate with
 
 ## Options
@@ -62,4 +73,5 @@ Search for Thermostat Card
 | ambient_temperature | string | optional | An entity id of a sensor to use as `ambient_temperature` instead of the one provided by the thermostat
 
 ## Credits
+
 <a href="https://codepen.io/dalhundal">@dalhundal</a>

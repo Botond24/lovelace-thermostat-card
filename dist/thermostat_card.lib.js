@@ -58,7 +58,7 @@ export default class ThermostatUI {
     root.appendChild(this._buildDialSlot(2));
     root.appendChild(this._buildDialSlot(3));
 
-    root.appendChild(this._buildText(config.radius, 'title', 0));
+    root.appendChild(this._buildText(config.radius, ' ', 0));
     root.appendChild(this._buildText(config.radius, 'ambient', 0));
     root.appendChild(this._buildText(config.radius, 'target', 0));
     root.appendChild(this._buildText(config.radius, 'low', -config.radius / 2.5));
