@@ -37,7 +37,7 @@ export default class ThermostatUI {
     this._container = document.createElement('div');
     this._main_icon = document.createElement('div');
     this._modes_dialog = document.createElement('div');
-    config.title = config.title === null || config.title === undefined ? 'Title' : config.title
+    config.title = config.title === null || config.title === undefined ? '' : config.title
 
     this._ic = document.createElement('div');
     this._ic.className = "prop";
@@ -194,6 +194,7 @@ export default class ThermostatUI {
     this._updateTicks(from, to, tick_indexes, this.hvac_state);
     // this._updateColor(this.hvac_state, this.preset_mode);
     this._updateText('ambient', this.ambient);
+    this._updateText('title', config.title);
     this._updateEdit(false);
     this._updateDialog(this.hvac_modes,hass);
   }
