@@ -106,6 +106,7 @@ class ThermostatCard extends HTMLElement {
     if (!cardConfig.chevron_size) cardConfig.chevron_size = 50;
     if (!cardConfig.num_ticks) cardConfig.num_ticks = 150;
     if (!cardConfig.tick_degrees) cardConfig.tick_degrees = 300;
+    if (!cardConfig.title) cardConfig.title = entity.attributes.friendly_name
 
     // Extra config values generated for simplicity of updates
     cardConfig.radius = cardConfig.diameter / 2;
