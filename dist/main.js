@@ -101,9 +101,8 @@ class ThermostatCard extends HTMLElement {
     if (root.lastChild) root.removeChild(root.lastChild);
 
     // Prepare config defaults
-    const cardConfig = deepClone(config);
+    let cardConfig = deepClone(config);
     // cardConfig.hvac = Object.assign({}, config.hvac);
-    
     if (!cardConfig.diameter) cardConfig.diameter = 400;
     if (!cardConfig.pending) cardConfig.pending = 3;
     if (!cardConfig.idle_zone) cardConfig.idle_zone = 2;
@@ -113,7 +112,7 @@ class ThermostatCard extends HTMLElement {
     if (!cardConfig.chevron_size) cardConfig.chevron_size = 50;
     if (!cardConfig.num_ticks) cardConfig.num_ticks = 150;
     if (!cardConfig.tick_degrees) cardConfig.tick_degrees = 300;
-    if (!Object.hasOwn(cardConfig,title)) cardConfig.title = entity.attributes.friendly_name
+    if (!Object.hasOwn(cardConfig,title)) cardConfig["title"] = entity.attributes.friendly_name
 
     // Extra config values generated for simplicity of updates
     cardConfig.radius = cardConfig.diameter / 2;
