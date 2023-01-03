@@ -1,6 +1,6 @@
 import {cssData} from './styles.js';
 import ThermostatUI from './thermostat_card.lib.js';
-console.info("%c Thermostat Card \n%c  Version  1.3.2 ", "color: orange; font-weight: bold; background: black", "color: white; font-weight: bold; background: dimgray");
+console.info("%c Thermostat Card \n%c  Version  1.3.4-beta ", "color: orange; font-weight: bold; background: black", "color: white; font-weight: bold; background: dimgray");
 class ThermostatCard extends HTMLElement {
   constructor() {
     super();
@@ -112,7 +112,7 @@ class ThermostatCard extends HTMLElement {
     if (!cardConfig.chevron_size) cardConfig.chevron_size = 50;
     if (!cardConfig.num_ticks) cardConfig.num_ticks = 150;
     if (!cardConfig.tick_degrees) cardConfig.tick_degrees = 300;
-    if (!Object.hasOwn(cardConfig,title)) cardConfig["title"] = entity.attributes.friendly_name
+    if (!Object.hasOwn(cardConfig,title)) cardConfig = {...cardConfig, "title":entity.attributes.friendly_name}
 
     // Extra config values generated for simplicity of updates
     cardConfig.radius = cardConfig.diameter / 2;
